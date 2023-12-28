@@ -5,5 +5,5 @@ Feature: Filtering by unit price test - Scenario 19
     When Log in to the page
     And Click on "off plan" at the left side of menu
     Then Verify the right page opens
-    And Filter the products by price range from '1200000' to '2000000' AED
+    And Filter the products by price range from '1200000' to '2000000'
     And Verify the price in all cards is between '1200000' and '2000000'

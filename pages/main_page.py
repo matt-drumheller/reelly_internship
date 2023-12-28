@@ -10,4 +10,7 @@ class MainPage(Page):
     def open_main(self):
         self.open_url('https://soft.reelly.io/')
 
+    def off_plan_button(self):
+        self.click(*self.OFF_PLAN_BUTTON)
+
 
