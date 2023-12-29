@@ -24,10 +24,6 @@ class OffPlanPage(Page):
 
     def filter_verification(self, price_low, price_high):
         price = self.find_element(*self.LISTED_PRICE).text
-        for prices in price:
-            if prices >= price_low and prices <= price_high:
-                True
-            else:
-                False
+        assert price_low <= price <= price_high, f'Not in range'
 
 
