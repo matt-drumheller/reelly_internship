@@ -11,14 +11,23 @@ def browser_init(context):
     :param context: Behave context
     """
 #GOOGLE CHROME
-    driver_path = ChromeDriverManager().install()
-    service = Service(driver_path)
-    context.driver = webdriver.Chrome(service=service)
+    # driver_path = ChromeDriverManager().install()
+    # service = Service(driver_path)
+    # context.driver = webdriver.Chrome(service=service)
 
 
 #FIREFOX
     # service = Service(executable_path= r"C:\Users\matth\OneDrive\Desktop\reelly_internship\geckodriver")
     # context.driver = webdriver.Firefox(service=service)
+
+#HEADLESS MODE - GOOGLE CHROME
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    service = Service(ChromeDriverManager().install())
+    context.driver = webdriver.Chrome(
+        options = options,
+        service = service
+    )
 
 
     context.driver.wait = WebDriverWait(context.driver, 15)

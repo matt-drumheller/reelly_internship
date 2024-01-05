@@ -22,5 +22,5 @@ def log_in(context):
 
 @when('Click on "off plan" at the left side of menu')
 def off_plan_page(context):
-    sleep(5)
+    #sleep(5)
     context.app.main_page.off_plan_button()
