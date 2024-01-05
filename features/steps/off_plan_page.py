@@ -12,9 +12,11 @@ from time import sleep
 def off_plan_open(context):
     context.app.off_plan_page.verify_page_opens()
 
+
 @then('Filter the products by price range from {price_low} to {price_high}')
 def filter_price(context, price_low, price_high):
     context.app.off_plan_page.filter_pricing(price_low, price_high)
+
 
 @then('Verify the price in all cards is between {price_low} and {price_high}')
 def applied_filter(context, price_low, price_high):
