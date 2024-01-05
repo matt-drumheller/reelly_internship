@@ -31,19 +31,19 @@ def browser_init(context, scenario_name):
 
 
 ### BROWSERSTACK ###
-    bs_user = 'matthewdrumhelle_OWG1Fs'
-    bs_key = 'euKxrcix4gThpk95ZhAF'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
-    options = Options()
-    bstack_options = {
-        'os': 'OS X',
-        'osVersion': 'Big Sur',
-        'browserName': 'Chrome',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    # bs_user = 'matthewdrumhelle_OWG1Fs'
+    # bs_key = 'euKxrcix4gThpk95ZhAF'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     'os': 'OS X',
+    #     'osVersion': 'Big Sur',
+    #     'browserName': 'Chrome',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
 
     context.driver.wait = WebDriverWait(context.driver, 15)
