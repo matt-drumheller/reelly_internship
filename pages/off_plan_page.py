@@ -23,7 +23,6 @@ class OffPlanPage(Page):
         self.click(*self.APPLY_FILTER)
 
     def filter_verification(self, price_low, price_high):
-        price = self.find_element(*self.LISTED_PRICE).text
-        assert price_low <= price <= price_high, f'Not in range'
-
-
+        prices = self.find_elements(*self.LISTED_PRICE)[3:]
+        for price in prices:
+            assert price_low <= price <= price_high, f'Not in range'
